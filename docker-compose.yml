@@ -6,6 +6,7 @@ services:
         working_dir: /application
         volumes:
             - .:/application
+            - ./database:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=password
             - MYSQL_DATABASE=jobeet
