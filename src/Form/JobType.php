@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Form;
+
 use App\Entity\Category;
 use App\Entity\Job;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -18,6 +19,7 @@ use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\NotNull;
+
 class JobType extends AbstractType
 {
     /**
