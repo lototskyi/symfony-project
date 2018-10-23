@@ -36,7 +36,7 @@ class JobController extends AbstractController
             $page,
             $this->getParameter('max_per_page'),
             [
-                PaginatorInterface::DEFAULT_SORT_FIELD_NAME => 'j.createdAt',
+                PaginatorInterface::DEFAULT_SORT_FIELD_NAME => 'j.id',
                 PaginatorInterface::DEFAULT_SORT_DIRECTION => 'DESC',
             ]
         );
