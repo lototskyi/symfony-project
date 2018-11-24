@@ -13,6 +13,7 @@ class LuckyController
      */
     public function number()
     {
+        echo date('Y-m-d H:i:s') . PHP_EOL;
         $number = random_int(0, 100);
 
         return new Response(
