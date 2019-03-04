@@ -3,6 +3,10 @@
 #    controller: App\Controller\DefaultController::index
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+    prefix:
+        en: ''
+        ru: '/ru'
+
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
     prefix: /register

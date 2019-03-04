@@ -6,11 +6,13 @@
 
         <div class="collapse navbar-collapse">
             {% if job.activated %}
-                {% if job.expiresAt < date() %}
-                    <p class="navbar-text ">Expired</p>
-                {% else %}
-                    <p class="navbar-text ">Expires in <strong>{{ job.expiresAt.diff(date())|date('%a') }}</strong> days</p>
-                {% endif %}
+                <p class="navbar-text">
+                    {% set daysToExpiring = job.expiresAt.diff(date())|date('%a') %}
+
+                    {% transchoice daysToExpiring with {'%days%': daysToExpiring} %}
+                        ]-Inf,0] Expired|{1}Expires in 1 day|]1,Inf[ Expires in %days% days
+                    {% endtranschoice %}
+                </p>
 
                 {% if job.expiresAt.diff(date())|date('%a') < 5 %}
                     <a class="btn btn-default navbar-btn" href="#">
