@@ -9,8 +9,13 @@ use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Entity;
+use Symfony\Component\Routing\Annotation\Route;
 
-
+/**
+ * Class JobController
+ * @package App\Controller\API
+ * @Route("/api/v1")
+ */
 class JobController extends AbstractFOSRestController
 {
     /**
