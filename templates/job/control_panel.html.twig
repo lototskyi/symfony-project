@@ -41,7 +41,7 @@
             {% endif %}
 
             <p class="navbar-text navbar-right">
-                [Bookmark this <a href="{{ url('job.preview', {token: job.token}) }}">URL</a> to manage this job in the future]
+                {{ '[Bookmark this <a href="%url%">URL</a> to manage this job in the future]'|trans({'%url%': path('job.preview', {token: job.token})})|raw }}
             </p>
         </div>
     </div>
